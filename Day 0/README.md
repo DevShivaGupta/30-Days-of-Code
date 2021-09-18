@@ -1,5 +1,3 @@
-## 30 Days of Code ##
-
 
 ---
 permalink: /making-readmes-readable/
