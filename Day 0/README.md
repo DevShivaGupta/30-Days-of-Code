@@ -1,4 +1,6 @@
 ## 30 Days of Code ##
+
+
 ---
 permalink: /making-readmes-readable/
 title: Making READMEs readable
