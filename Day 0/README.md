@@ -1,5 +1,6 @@
 # 30-Days-of-Code
 30 Days of Code HackerRank
+
 ---
 permalink: /making-readmes-readable/
 title: Making READMEs readable
