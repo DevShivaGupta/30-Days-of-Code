@@ -3,7 +3,6 @@ Today, we're discussing data types. Check out the Tutorial tab for learning mate
 
 #### Task
 Complete the code in the editor below. The variables ***i***, ***d***, and ***s*** are already declared and initialized for you. You must:
-
 1. Declare ***3*** variables: one of type int, one of type double, and one of type String.
 2. Read ***3*** lines of input from stdin (according to the sequence given in the Input Format section below) and initialize your  variables.
 3. Use the ***3*** operator to perform the following operations:
