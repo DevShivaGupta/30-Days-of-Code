@@ -8,10 +8,10 @@ To complete this challenge, you must save a line of input from stdin to a variab
 You've got this! <br />
 **Note:** The instructions are Java-based, but we support submissions in many popular languages. You can switch languages using the drop-down menu above your editor, and the ***inputstring*** variable may be written differently depending on the best-practice conventions of your submission language.
 
-####Input Format 
+#### Input Format 
 A single line of text denoting  ***inputstring*** (the variable whose contents must be printed).  
 
-####Output Format
+#### Output Format
 Print Hello, World. on the first line, and the contents of  ***inputstring*** on the second line .
 
 **Sample Input**
