@@ -18,6 +18,7 @@ solve has the following parameters:
 * int meal_cost: the cost of food before tip and tax
 * int tip_percent: the tip percentage
 * int tax_percent: the tax percentage<br/>
+
 Returns The function returns nothing. Print the calculated value, rounded to the nearest integer.<br/>
 
 **Note:** Be sure to use precise values for your calculations, or you may end up with an incorrectly rounded result.
