@@ -44,8 +44,8 @@ Given:
 ***mealcost*** **=12**,***tip_percent*** **= 20** ,***tax_percent*** **=8** 
 
 Calculations:
-**tip=12 and (12/100)*20=2.4**
-**tax=8 and (8/100)*20=0.96**
+**tip=12 and (12/100)X20=2.4**<br/>
+**tax=8 and (8/100)X20=0.96**<br/>
 **total_cost=meat_cost+tip+tax=12+2.4+0.96=15.36
 **round(total_cost)=15**
 We round **total_cost** to the nearest integer and print the result, **15**.**
