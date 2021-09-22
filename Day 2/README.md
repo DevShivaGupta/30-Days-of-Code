@@ -1,4 +1,4 @@
-## Variable Sized Arrays
+## Day 2: Operators
 ### Objective
 In this challenge, you will work with arithmetic operators. Check out the [Tutorial](https://www.hackerrank.com/challenges/30-operators/tutorial) tab for learning materials and an instructional video.
 
