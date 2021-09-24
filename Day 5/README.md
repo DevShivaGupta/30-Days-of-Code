@@ -1,51 +1,44 @@
-## Variable Sized Arrays
+## Day 5: Loops
 ### Objective
-In this challenge, you will work with arithmetic operators. Check out the Tutorial tab for learning materials and an instructional video.
+In this challenge, we will use loops to do some math. Check out the Tutorial tab to learn more.
 
 #### Task
-Given the meal price (base cost of a meal), tip percent (the percentage of the meal price being added as tip), and tax percent (the percentage of the meal price being added as tax) for a meal, find and print the meal's total cost. Round the result to the nearest integer.
+Given an integer,***n***, print its first **10** multiples. Each multiple **n x i** (where 1≤i≤10) should be printed on a new line in the form: n x i = result
 
 #### Example
-***mealcost***=**100**
-***tippercent***=**15**
-***taxpercent***=**8**
-A tip of 15% * 100 = 15, and the taxes are 8% * 100 = 8. Print the value  and return from the function.
+**n=3**
+The printout should look like this:
 
-#### Function Description
-Complete the solve function in the editor below.
-
-solve has the following parameters:
-
-* int meal_cost: the cost of food before tip and tax
-* int tip_percent: the tip percentage
-* int tax_percent: the tax percentage
-Returns The function returns nothing. Print the calculated value, rounded to the nearest integer.
-
-Note: Be sure to use precise values for your calculations, or you may end up with an incorrectly rounded result.
-
+	3 x 1 = 3
+	3 x 2 = 6
+	3 x 3 = 9
+	3 x 4 = 12
+	3 x 5 = 15
+	3 x 6 = 18
+	3 x 7 = 21
+	3 x 8 = 24
+	3 x 9 = 27
+	3 x 10 = 30
 #### Input Format
+A single integer,**n** .
+#### Constraints
+* **2≤n≤20**
+#### Output Format
 
-There are **3** lines of numeric input:
-The first line has a double, ***mealcost*** (the cost of the meal before tax and tip).
-The second line has an integer, ***tippercent*** (the percentage of ***mealcost*** being added as tip).
-The third line has an integer, ***taxpercent*** (the percentage of ***mealcost*** being added as tax).
-
+Print **10** lines of output; each line **i** (where **1≤i≤10**) contains the ***result*** of ***n x i*** in the form:<br/>
+n x i = result.
 #### Sample Input
 
-	12.00
-	20
-	8
+	2
 #### Sample Output
 
-	15
-#### Explanation
-
-Given:
-***mealcost*** **=12**,***tip_percent*** **= 20** ,***tax_percent*** **=8** 
-
-Calculations:
-**tip=12 and (12/100)*20=2.4
-tax=8 and (8/100)*20=0.96
-total_cost=meat_cost+tip+tax=12+2.4+0.96=15.36
-round(total_cost)=15
-We round **total_cost** to the nearest integer and print the result, **15**.
+	2 x 1 = 2
+	2 x 2 = 4
+	2 x 3 = 6
+	2 x 4 = 8
+	2 x 5 = 10
+	2 x 6 = 12
+	2 x 7 = 14
+	2 x 8 = 16
+	2 x 9 = 18
+	2 x 10 = 20
