@@ -6,7 +6,7 @@ In this challenge, we will use loops to do some math. Check out the Tutorial tab
 Given an integer,***n***, print its first **10** multiples. Each multiple **n x i** (where 1≤i≤10) should be printed on a new line in the form: n x i = result
 
 #### Example
-**n=3**
+**n=3**<br/>
 The printout should look like this:
 
 	3 x 1 = 3
