@@ -1,51 +1,53 @@
-## Variable Sized Arrays
-### Objective
-In this challenge, you will work with arithmetic operators. Check out the Tutorial tab for learning materials and an instructional video.
+## Day 6: Let's Review
+#### Objective
+Today we will expand our knowledge of strings, combining it with what we have already learned about loops. Check out the [Tutorial](Day 6: Let's Review) tab for learning materials and an instructional video.
 
 #### Task
-Given the meal price (base cost of a meal), tip percent (the percentage of the meal price being added as tip), and tax percent (the percentage of the meal price being added as tax) for a meal, find and print the meal's total cost. Round the result to the nearest integer.
+Given a string,**S**, of length **N** that is indexed from **0** to **N-1**, print its even-indexed and odd-indexed characters as **2** space-separated strings on a single line (see the Sample below for more detail).
+
+**Note:**  is considered to be an even index.
 
 #### Example
-***mealcost***=**100**
-***tippercent***=**15**
-***taxpercent***=**8**
-A tip of 15% * 100 = 15, and the taxes are 8% * 100 = 8. Print the value  and return from the function.
-
-#### Function Description
-Complete the solve function in the editor below.
-
-solve has the following parameters:
-
-* int meal_cost: the cost of food before tip and tax
-* int tip_percent: the tip percentage
-* int tax_percent: the tax percentage
-Returns The function returns nothing. Print the calculated value, rounded to the nearest integer.
-
-Note: Be sure to use precise values for your calculations, or you may end up with an incorrectly rounded result.
+**s=adhecf**
+Print abc def
 
 #### Input Format
 
-There are **3** lines of numeric input:
-The first line has a double, ***mealcost*** (the cost of the meal before tax and tip).
-The second line has an integer, ***tippercent*** (the percentage of ***mealcost*** being added as tip).
-The third line has an integer, ***taxpercent*** (the percentage of ***mealcost*** being added as tax).
+The first line contains an integer, **T** (the number of test cases).
+Each line **i** of the **T** subsequent lines contain a string, **S**.
+
+#### Constraints
+* 1≤T≤10
+* 2≤length of s≤10000
+#### Output Format
+
+For each String **Sj** (where 0≤j≤T-1), print **Sj**'s even-indexed characters, followed by a space, followed by **Sj**'s odd-indexed characters.
 
 #### Sample Input
 
-	12.00
-	20
-	8
+	2
+	Hacker
+	Rank
 #### Sample Output
 
-	15
+	Hce akr
+	Rn ak
 #### Explanation
 
-Given:
-***mealcost*** **=12**,***tip_percent*** **= 20** ,***tax_percent*** **=8** 
+Test Case 0:
+S="Hacker"<br/>
+S[0]="H"<br/>
+S[1]="a"<br/>
+S[2]="c"<br/>
+S[3]="k"<br/>
+S[4]="e"<br/>
+S[5]="r"<br/>
+The even indices are **0**,**2**, and **4**, and the odd indices are **1**, **3**, and **5**. We then print a single line of  **2** space-separated strings; the first string contains the ordered characters from **S**'s even indices (**Hce**), and the second string contains the ordered characters from **S**'s odd indices (**akr**).
 
-Calculations:
-**tip=12 and (12/100)*20=2.4
-tax=8 and (8/100)*20=0.96
-total_cost=meat_cost+tip+tax=12+2.4+0.96=15.36
-round(total_cost)=15
-We round **total_cost** to the nearest integer and print the result, **15**.
+Test Case 1: 
+S="Rank"<br/>
+S[0]="R"<br/>
+S[1]="a"<br/>
+S[2]="n"<br/>
+S[3]="k"<br/>
+The even indices are **0** and **2**, and the odd indices are **1** and **3**. We then print a single line of **2** space-separated strings; the first string contains the ordered characters from **S**'s even indices (**Rn**), and the second string contains the ordered characters from **S**'s odd indices (**ak**).
