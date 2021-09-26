@@ -7,7 +7,7 @@ Given an array,**A**, of **N** integers, print **A**'s elements in reverse order
 
 #### Example
 
-**A=[1,2,3,4]**
+**A=[1,2,3,4]**<br/>
 Print 4 3 2 1. Each integer is separated by one space.
 
 #### Input Format
