@@ -1,5 +1,7 @@
 'use strict';
 
+const fs = require('fs');
+
 process.stdin.resume();
 process.stdin.setEncoding('utf-8');
 
@@ -21,26 +23,30 @@ function readLine() {
 }
 
 /*
- * Complete the 'solve' function below.
+ * Complete the 'factorial' function below.
  *
- * The function accepts following parameters:
- *  1. DOUBLE meal_cost
- *  2. INTEGER tip_percent
- *  3. INTEGER tax_percent
+ * The function is expected to return an INTEGER.
+ * The function accepts INTEGER n as parameter.
  */
 
-function solve(meal_cost, tip_percent, tax_percent) {
-    let totalCost;
-    totalCost=meal_cost+((meal_cost/100)*tip_percent)+((meal_cost/100)*tax_percent);
-    console.log(Math.round(totalCost));
+function factorial(n) {
+   if(n==0)
+    return 0;
+    else if(n==1)
+    return 1;
+    else
+    return n*factorial(n-1);
+
 }
 
 function main() {
-    const meal_cost = parseFloat(readLine().trim());
+    const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
 
-    const tip_percent = parseInt(readLine().trim(), 10);
+    const n = parseInt(readLine().trim(), 10);
 
-    const tax_percent = parseInt(readLine().trim(), 10);
+    const result = factorial(n);
 
-    solve(meal_cost, tip_percent, tax_percent);
+    ws.write(result + '\n');
+
+    ws.end();
 }
