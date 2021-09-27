@@ -1,51 +1,53 @@
 ## Variable Sized Arrays
 ### Objective
-In this challenge, you will work with arithmetic operators. Check out the Tutorial tab for learning materials and an instructional video.
+Today, we're learning about Key-Value pair mappings using a Map or Dictionary data structure. Check out the Tutorial tab for learning materials and an instructional video!
 
-#### Task
-Given the meal price (base cost of a meal), tip percent (the percentage of the meal price being added as tip), and tax percent (the percentage of the meal price being added as tax) for a meal, find and print the meal's total cost. Round the result to the nearest integer.
+Task
+Given  names and phone numbers, assemble a phone book that maps friends' names to their respective phone numbers. You will then be given an unknown number of names to query your phone book for. For each  queried, print the associated entry from your phone book on a new line in the form name=phoneNumber; if an entry for  is not found, print Not found instead.
 
-#### Example
-***mealcost***=**100**
-***tippercent***=**15**
-***taxpercent***=**8**
-A tip of 15% * 100 = 15, and the taxes are 8% * 100 = 8. Print the value  and return from the function.
+Note: Your phone book should be a Dictionary/Map/HashMap data structure.
 
-#### Function Description
-Complete the solve function in the editor below.
+Input Format
 
-solve has the following parameters:
+The first line contains an integer, , denoting the number of entries in the phone book.
+Each of the  subsequent lines describes an entry in the form of  space-separated values on a single line. The first value is a friend's name, and the second value is an -digit phone number.
 
-* int meal_cost: the cost of food before tip and tax
-* int tip_percent: the tip percentage
-* int tax_percent: the tax percentage
-Returns The function returns nothing. Print the calculated value, rounded to the nearest integer.
+After the  lines of phone book entries, there are an unknown number of lines of queries. Each line (query) contains a  to look up, and you must continue reading lines until there is no more input.
 
-Note: Be sure to use precise values for your calculations, or you may end up with an incorrectly rounded result.
+Note: Names consist of lowercase English alphabetic letters and are first names only.
 
-#### Input Format
+Constraints
 
-There are **3** lines of numeric input:
-The first line has a double, ***mealcost*** (the cost of the meal before tax and tip).
-The second line has an integer, ***tippercent*** (the percentage of ***mealcost*** being added as tip).
-The third line has an integer, ***taxpercent*** (the percentage of ***mealcost*** being added as tax).
+Output Format
 
-#### Sample Input
+On a new line for each query, print Not found if the name has no corresponding entry in the phone book; otherwise, print the full  and  in the format name=phoneNumber.
 
-	12.00
-	20
-	8
-#### Sample Output
+Sample Input
 
-	15
-#### Explanation
+3
+sam 99912222
+tom 11122222
+harry 12299933
+sam
+edward
+harry
+Sample Output
 
-Given:
-***mealcost*** **=12**,***tip_percent*** **= 20** ,***tax_percent*** **=8** 
+sam=99912222
+Not found
+harry=12299933
+Explanation
 
-Calculations:
-**tip=12 and (12/100)*20=2.4
-tax=8 and (8/100)*20=0.96
-total_cost=meat_cost+tip+tax=12+2.4+0.96=15.36
-round(total_cost)=15
-We round **total_cost** to the nearest integer and print the result, **15**.
+We add the following  (Key,Value) pairs to our map so it looks like this:
+
+
+We then process each query and print key=value if the queried  is found in the map; otherwise, we print Not found.
+
+Query 0: sam
+Sam is one of the keys in our dictionary, so we print sam=99912222.
+
+Query 1: edward
+Edward is not one of the keys in our dictionary, so we print Not found.
+
+Query 2: harry
+Harry is one of the keys in our dictionary, so we print harry=12299933.
