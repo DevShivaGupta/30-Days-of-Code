@@ -1,30 +1,19 @@
-#!/bin/python3
+# Enter your code here. Read input from STDIN. Print output to STDOUT
 
-import math
-import os
-import random
-import re
-import sys
+x = int(input())
 
-#
-# Complete the 'solve' function below.
-#
-# The function accepts following parameters:
-#  1. DOUBLE meal_cost
-#  2. INTEGER tip_percent
-#  3. INTEGER tax_percent
-#
+dictt = {}
 
-def solve(meal_cost, tip_percent, tax_percent):
-    total_cost=0
-    total_cost=meal_cost+((meal_cost/100)*tip_percent)+((meal_cost/100)*tax_percent)
-    print(round(total_cost))
+for i in range(x):
+    text = input().split()
+    dictt[text[0]] = text[1]
 
-if __name__ == '__main__':
-    meal_cost = float(input().strip())
-
-    tip_percent = int(input().strip())
-
-    tax_percent = int(input().strip())
-
-    solve(meal_cost, tip_percent, tax_percent)
+while True:
+    try:
+        inpt = input()
+        if inpt in dictt:
+            print(inpt+"="+dictt[inpt])
+        else:
+            print("Not found")
+    except EOFError:
+        break
