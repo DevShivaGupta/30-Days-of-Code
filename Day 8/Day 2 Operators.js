@@ -1,46 +1,27 @@
-'use strict';
-
+function processData(input) {
+    var input = input.split('\n');
+    var num = input[0];
+    var phone = new Map();
+    for (var i = 1; i <=num; i++){
+        var line='';
+        line=input[i]
+        line=line.split(' ');
+        phone.set(line[0],line[1]);
+    }   
+    for (var j=i; j <input.length; j++){
+        if(phone.has(input[j]))
+        console.log(`${input[j]}=${phone.get(input[j])}`);   
+        else
+        console.log("Not found");
+    }
+}
 process.stdin.resume();
-process.stdin.setEncoding('utf-8');
-
-let inputString = '';
-let currentLine = 0;
-
-process.stdin.on('data', function(inputStdin) {
-    inputString += inputStdin;
+process.stdin.setEncoding("ascii");
+_input = "";
+process.stdin.on("data", function (input) {
+    _input += input;
 });
 
-process.stdin.on('end', function() {
-    inputString = inputString.split('\n');
-
-    main();
+process.stdin.on("end", function () {
+   processData(_input);
 });
-
-function readLine() {
-    return inputString[currentLine++];
-}
-
-/*
- * Complete the 'solve' function below.
- *
- * The function accepts following parameters:
- *  1. DOUBLE meal_cost
- *  2. INTEGER tip_percent
- *  3. INTEGER tax_percent
- */
-
-function solve(meal_cost, tip_percent, tax_percent) {
-    let totalCost;
-    totalCost=meal_cost+((meal_cost/100)*tip_percent)+((meal_cost/100)*tax_percent);
-    console.log(Math.round(totalCost));
-}
-
-function main() {
-    const meal_cost = parseFloat(readLine().trim());
-
-    const tip_percent = parseInt(readLine().trim(), 10);
-
-    const tax_percent = parseInt(readLine().trim(), 10);
-
-    solve(meal_cost, tip_percent, tax_percent);
-}
