@@ -13,31 +13,30 @@ char* readline();
 char* ltrim(char*);
 char* rtrim(char*);
 
-double parse_double(char*);
 int parse_int(char*);
 
-/*
- * Complete the 'solve' function below.
- *
- * The function accepts following parameters:
- *  1. DOUBLE meal_cost
- *  2. INTEGER tip_percent
- *  3. INTEGER tax_percent
- */
 
-void solve(double meal_cost, int tip_percent, int tax_percent) {
-float total_cost;
-total_cost=meal_cost+((meal_cost/100)*tip_percent)+((meal_cost/100)*tax_percent);
-printf("%.0f", round(total_cost));
 
+int factorial(int n) {
+    if(n==0)
+    return 0;
+    else if(n==1)
+    return 1;
+    else
+    return n*factorial(n-1);
 }
 
 int main()
 {
-    double meal_cost = parse_double(ltrim(rtrim(readline())));
-    int tip_percent = parse_int(ltrim(rtrim(readline())));
-    int tax_percent = parse_int(ltrim(rtrim(readline())));
-    solve(meal_cost, tip_percent, tax_percent);
+    FILE* fptr = fopen(getenv("OUTPUT_PATH"), "w");
+
+    int n = parse_int(ltrim(rtrim(readline())));
+
+    int result = factorial(n);
+
+    fprintf(fptr, "%d\n", result);
+
+    fclose(fptr);
 
     return 0;
 }
@@ -128,17 +127,6 @@ char* rtrim(char* str) {
     *(end + 1) = '\0';
 
     return str;
-}
-
-double parse_double(char* str) {
-    char* endptr;
-    double value = strtod(str, &endptr);
-
-    if (endptr == str || *endptr != '\0') {
-        exit(EXIT_FAILURE);
-    }
-
-    return value;
 }
 
 int parse_int(char* str) {
