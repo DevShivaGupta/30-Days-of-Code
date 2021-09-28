@@ -1,12 +1,12 @@
 ## Day 10: Binary Numbers
 ### Objective
-Today, we're working with binary numbers. Check out the Tutorial tab for learning materials and an instructional video!
+Today, we're working with binary numbers. Check out the [Tutorial](https://www.hackerrank.com/challenges/30-binary-numbers/tutorial) tab for learning materials and an instructional video!
 
 #### Task
 Given a base-**10** integer, **n**, convert it to binary (base-**2**). Then find and print the base-**10** integer denoting the maximum number of consecutive **1**'s in **n**'s binary representation. When working with different bases, it is common to show the base as a subscript.
 
 #### Example
-**n = 125**
+**n = 125**<br/>
 The binary representation of **125**<sub>**10**</sub> is **1111101**<sub>**2**</sub>. In base **10**, there are **5** and **1** consecutive ones in two groups. Print the maximum, **5**.
 
 #### Input Format
