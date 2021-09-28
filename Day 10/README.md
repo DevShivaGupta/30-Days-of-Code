@@ -1,4 +1,4 @@
-## Variable Sized Arrays
+## Day 10: Binary Numbers
 ### Objective
 Today, we're working with binary numbers. Check out the Tutorial tab for learning materials and an instructional video!
 
@@ -34,7 +34,7 @@ Print a single base-**10** integer that denotes the maximum number of consecutiv
 #### Explanation
 
 Sample Case 1:<br/>
-The binary representation of **5**<sub>**10**</sub>is **101**<sub>**2**</sub>, so the maximum number of consecutive **1**'s is **1**.
+The binary representation of **5**<sub>**10**</sub> is **101**<sub>**2**</sub>, so the maximum number of consecutive **1**'s is **1**.
 <br/>
 Sample Case 2:<br/>
 The binary representation of **13**<sub>**10**</sub> is **1101**<sub>**2**</sub>, so the maximum number of consecutive **1**'s is **2**.
