@@ -1,51 +1,40 @@
-## Variable Sized Arrays
+## Day 10: Binary Numbers
 ### Objective
-In this challenge, you will work with arithmetic operators. Check out the Tutorial tab for learning materials and an instructional video.
+Today, we're working with binary numbers. Check out the Tutorial tab for learning materials and an instructional video!
 
-#### Task
-Given the meal price (base cost of a meal), tip percent (the percentage of the meal price being added as tip), and tax percent (the percentage of the meal price being added as tax) for a meal, find and print the meal's total cost. Round the result to the nearest integer.
+Task
+Given a base-**10** integer,**n**, convert it to binary (base-**2**). Then find and print the base-**10** integer denoting the maximum number of consecutive **1**'s in **n**'s binary representation. When working with different bases, it is common to show the base as a subscript.
 
 #### Example
-***mealcost***=**100**
-***tippercent***=**15**
-***taxpercent***=**8**
-A tip of 15% * 100 = 15, and the taxes are 8% * 100 = 8. Print the value  and return from the function.
-
-#### Function Description
-Complete the solve function in the editor below.
-
-solve has the following parameters:
-
-* int meal_cost: the cost of food before tip and tax
-* int tip_percent: the tip percentage
-* int tax_percent: the tax percentage
-Returns The function returns nothing. Print the calculated value, rounded to the nearest integer.
-
-Note: Be sure to use precise values for your calculations, or you may end up with an incorrectly rounded result.
+**n=125**<br/>
+The binary representation of **125**<sub>10</sub> is **1111101**<sub>2</sub>. In base **10**, there are **5** and **1** consecutive ones in two groups. Print the maximum, **5**.
 
 #### Input Format
 
-There are **3** lines of numeric input:
-The first line has a double, ***mealcost*** (the cost of the meal before tax and tip).
-The second line has an integer, ***tippercent*** (the percentage of ***mealcost*** being added as tip).
-The third line has an integer, ***taxpercent*** (the percentage of ***mealcost*** being added as tax).
+A single integer, **n**.
 
-#### Sample Input
+#### Constraints
+* 1<=n<=10<sup>6</sup>
+#### Output Format
 
-	12.00
-	20
-	8
-#### Sample Output
+Print a single base-**10** integer that denotes the maximum number of consecutive **1**'s in the binary representation of **n**.
 
-	15
+#### Sample Input 1
+
+	5
+#### Sample Output 1
+	
+	1
+#### Sample Input 2
+
+	13
+#### Sample Output 2
+
+	2
 #### Explanation
 
-Given:
-***mealcost*** **=12**,***tip_percent*** **= 20** ,***tax_percent*** **=8** 
+Sample Case 1:
+The binary representation of **5**<sub>10</sub> is **101**<sub>2</sub>, so the maximum number of consecutive **1**'s is **1**.
 
-Calculations:
-**tip=12 and (12/100)*20=2.4
-tax=8 and (8/100)*20=0.96
-total_cost=meat_cost+tip+tax=12+2.4+0.96=15.36
-round(total_cost)=15
-We round **total_cost** to the nearest integer and print the result, **15**.
+#### Sample Case 2:
+The binary representation of **13**<sub>10</sub> is **1101**<sub>2</sub>, so the maximum number of consecutive **!**'s is **2**.
