@@ -12,33 +12,37 @@
 char* readline();
 char* ltrim(char*);
 char* rtrim(char*);
+char** split_string(char*);
 
-double parse_double(char*);
 int parse_int(char*);
 
-/*
- * Complete the 'solve' function below.
- *
- * The function accepts following parameters:
- *  1. DOUBLE meal_cost
- *  2. INTEGER tip_percent
- *  3. INTEGER tax_percent
- */
 
-void solve(double meal_cost, int tip_percent, int tax_percent) {
-float total_cost;
-total_cost=meal_cost+((meal_cost/100)*tip_percent)+((meal_cost/100)*tax_percent);
-printf("%.0f", round(total_cost));
-
-}
 
 int main()
 {
-    double meal_cost = parse_double(ltrim(rtrim(readline())));
-    int tip_percent = parse_int(ltrim(rtrim(readline())));
-    int tax_percent = parse_int(ltrim(rtrim(readline())));
-    solve(meal_cost, tip_percent, tax_percent);
 
+    int** arr = malloc(6 * sizeof(int*));
+
+    for (int i = 0; i < 6; i++) {
+        *(arr + i) = malloc(6 * (sizeof(int)));
+
+        char** arr_item_temp = split_string(rtrim(readline()));
+
+        for (int j = 0; j < 6; j++) {
+            int arr_item = parse_int(*(arr_item_temp + j));
+
+            *(*(arr + i) + j) = arr_item;
+        }
+    }
+    int sum=-50;
+    int max=-50;
+    for(int i=0;i<4;i++)
+        for(int j=0;j<4;j++)
+        {
+            sum=arr[i][j]+arr[i][j+1]+arr[i][j+2]+arr[i+1][j+1]+arr[i+2][j]+arr[i+2][j+1]+arr[i+2][j+2];           if(sum>max)
+            max=sum;
+            }
+    printf("%d",max);
     return 0;
 }
 
@@ -130,15 +134,25 @@ char* rtrim(char* str) {
     return str;
 }
 
-double parse_double(char* str) {
-    char* endptr;
-    double value = strtod(str, &endptr);
+char** split_string(char* str) {
+    char** splits = NULL;
+    char* token = strtok(str, " ");
 
-    if (endptr == str || *endptr != '\0') {
-        exit(EXIT_FAILURE);
+    int spaces = 0;
+
+    while (token) {
+        splits = realloc(splits, sizeof(char*) * ++spaces);
+
+        if (!splits) {
+            return splits;
+        }
+
+        splits[spaces - 1] = token;
+
+        token = strtok(NULL, " ");
     }
 
-    return value;
+    return splits;
 }
 
 int parse_int(char* str) {
