@@ -31,7 +31,7 @@ There are **6** lines of input, where each line contains **6** space-separated i
 
 #### Constraints
 * -9<=A]\[i]\[j]<=9
-* 0<=i,j<5
+* 0<=i,j<=5
 #### Output Format
 
 Print the maximum hourglass sum in **A**.
