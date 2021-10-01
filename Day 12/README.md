@@ -22,7 +22,9 @@ The locked stub code in the editor reads the input and calls the Student class c
 The first line contains ***firstName***, ***lastName***, and ***idNumber***, separated by a space. The second line contains the number of test scores. The third line of space-separated integers describes ***scores***.
 
 #### Constraints
-
+* 1<length of firstName,length of lastName<=10
+* length of idNumber =7
+* 0<=score<=100
 #### Output Format
 
 Output is handled by the locked stub code. Your output will be correct if your Student class constructor and calculate() method are properly implemented.
