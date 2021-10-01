@@ -1,42 +1,74 @@
 ### Day 11: 2D Arrays
 #### Objective
-Today, we're delving into Inheritance. Check out the attached tutorial for learning materials and an instructional video.
+Today, we are building on our knowledge of arrays by adding another dimension. Check out the [Tutorial](https://www.hackerrank.com/challenges/30-2d-arrays/tutorial) tab for learning materials and an instructional video.
+
+#### Context
+Given a **6 X 6** 2D Array, **A**:
+
+	1 1 1 0 0 0
+	0 1 0 0 0 0
+	1 1 1 0 0 0
+	0 0 0 0 0 0
+	0 0 0 0 0 0
+	0 0 0 0 0 0
+We define an hourglass in **A** to be a subset of values with indices falling in this pattern in **A**'s graphical representation:
+
+	a b c
+ 	 d
+	e f g
+There are **16** hourglasses in **A**, and an hourglass sum is the sum of an hourglass' values.
 
 #### Task
-You are given two classes, Person and Student, where Person is the base class and Student is the derived class. Completed code for Person and a declaration for Student are provided for you in the editor. Observe that Student inherits all the properties of Person.
+Calculate the hourglass sum for every hourglass in **A**, then print the maximum hourglass sum.
 
-Complete the Student class by writing the following:
+#### Example
 
-* A Student class constructor, which has  parameters:
-	1. A string, ***firstName***.
-	2. A string, ***lastName***.
-	3. An integer, ***idNumber***.
-	4. An integer array (or vector) of test scores, .
-* A char calculate() method that calculates a Student object's average and returns the grade character representative of their calculated average:
-![GradinScale](https://s3.amazonaws.com/hr-challenge-images/17165/1458142706-3073bc9143-Grading.png)
+In the array shown above, the maximum hourglass sum is **7** for the hourglass in the top left corner.
 
-#### Input Format
+Input Format
 
-The locked stub code in the editor reads the input and calls the Student class constructor with the necessary arguments. It also calls the calculate method which takes no arguments.
-
-The first line contains ***firstName***, ***lastName***, and ***idNumber***, separated by a space. The second line contains the number of test scores. The third line of space-separated integers describes ***scores***.
+There are **6** lines of input, where each line contains **6** space-separated integers that describe the 2D Array **A**.
 
 #### Constraints
-
+* -9<=A]\[i]\[j]<=9
+* 0<=i,j<5
 #### Output Format
 
-Output is handled by the locked stub code. Your output will be correct if your Student class constructor and calculate() method are properly implemented.
+Print the maximum hourglass sum in **A**.
 
 #### Sample Input
 
-	Heraldo Memelli 8135627
-	2
-	100 80
+	1 1 1 0 0 0
+	0 1 0 0 0 0
+	1 1 1 0 0 0
+	0 0 2 4 4 0
+	0 0 0 2 0 0
+	0 0 1 2 4 0
 #### Sample Output
 
- 	Name: Memelli, Heraldo
- 	ID: 8135627
- 	Grade: O
+	19
+	
 #### Explanation
 
-This student had **2** scores to average: **100** and **80**. The student's average grade is **(100+80)/2=90**. An average grade of **90** corresponds to the letter grade ***0***, so the calculate() method should return the character'O'.
+**A** contains the following hourglasses:
+
+	1 1 1   1 1 0   1 0 0   0 0 0
+	  1       0       0       0
+	1 1 1   1 1 0   1 0 0   0 0 0
+
+	0 1 0   1 0 0   0 0 0   0 0 0
+ 	  1       1       0       0
+	0 0 2   0 2 4   2 4 4   4 4 0
+
+	1 1 1   1 1 0   1 0 0   0 0 0
+	  0       2       4       4
+	0 0 0   0 0 2   0 2 0   2 0 0
+
+	0 0 2   0 2 4   2 4 4   4 4 0
+	  0       0       2       0
+	0 0 1   0 1 2   1 2 4   2 4 0
+The hourglass with the maximum sum (**19**) is:
+
+	2 4 4
+ 	  2
+	1 2 4
