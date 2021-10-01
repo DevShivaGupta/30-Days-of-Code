@@ -1,3 +1,4 @@
+### Day 12: Inheritance
 #### Objective
 Today, we're delving into Inheritance. Check out the attached tutorial for learning materials and an instructional video.
 
